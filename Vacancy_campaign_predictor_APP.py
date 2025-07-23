@@ -1,7 +1,11 @@
 import os
-os.system('pip install joblib')
+try:
+    import joblib
+except ImportError:
+    os.system('pip install joblib')
+    import joblib
+
 import streamlit as st
-import joblib
 import pandas as pd
 
 # --- Load trained components ---
