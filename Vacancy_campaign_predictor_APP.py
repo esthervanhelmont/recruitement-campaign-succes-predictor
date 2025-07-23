@@ -1,3 +1,5 @@
+import os
+os.system('pip install joblib')
 import streamlit as st
 import joblib
 import pandas as pd
