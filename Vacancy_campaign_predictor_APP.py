@@ -2,7 +2,6 @@ import os
 try:
     import joblib
 except ImportError:
-    os.system('pip install joblib')
     import joblib
 
 import streamlit as st
