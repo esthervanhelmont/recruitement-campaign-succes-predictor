@@ -1,16 +1,5 @@
-import os
-try:
-    import joblib
-except ImportError:
-    import joblib
-
 import streamlit as st
 import pandas as pd
-
-# --- Load trained components ---
-model = joblib.load("campaign_model.pkl")
-scaler = joblib.load("campaign_scaler.pkl")
-pca = joblib.load("campaign_pca.pkl")
 
 # --- App title ---
 st.title("Recruitment Campaign Success Estimator")
