@@ -1,23 +1,19 @@
-try:
-    with open("campaign_model.pkl", "rb") as f:
-        model = pickle.load(f)
-except ModuleNotFoundError as e:
-    import streamlit as st
-    st.error(f"❌ Load error: {e}")
-
 import streamlit as st
 import pandas as pd
 import pickle
 
-with open("campaign_model.pkl", "rb") as f:
-    model = pickle.load(f)
+# Optional: error catching (niet noodzakelijk met pickle)
+try:
+    with open("campaign_model.pkl", "rb") as f:
+        model = pickle.load(f)
+except ModuleNotFoundError as e:
+    st.error(f"❌ Load error: {e}")
 
 with open("campaign_scaler.pkl", "rb") as f:
     scaler = pickle.load(f)
 
 with open("campaign_pca.pkl", "rb") as f:
     pca = pickle.load(f)
-
 
 # --- App title ---
 st.title("Recruitment Campaign Success Estimator")
