@@ -1,5 +1,7 @@
 import streamlit as st
 import pandas as pd
+import numpy as np
+import sklearn  # belangrijk!
 import pickle
 
 # Optional: error catching (niet noodzakelijk met pickle)
